@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "target": "es6",   //indica para qual linguagem que o compilador traduzirá o TS (ecmasript 6, no caso)
+        "outDir": "app/js",  //indica que o resultado da compilação deve ir para a pasta js(que foi renomeada 'ts', mas ainda assim funciona. A sintaxe é assim.) 
+        "noEmitOnError": true   //Impede que compile criando os arquivos JS se houve alguma alteração em propriedade que  é private TS. Se nao colocar vai criar as pastas JS e o browser vai rodar mesmo com a IDE apontando erro. Isso compromete a segurança da aplicação "
+
+    },
+    "include": [
+        "app/ts/**/*"  //indica quais arquivos serão levados em consideração durante a compilação(todos os arquivos**/todos os diretórios*)
+    ]
+}
