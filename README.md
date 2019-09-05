@@ -29,4 +29,4 @@ Não vai aceitar data no forms da data com '-' como em (12-05-2018). Por isso us
 TSD (TypeScript Definition) é uma biblioteca que mapeia as funcoes do Jquery para ter a opçao de auto complete das funcoes Jquery no arquivo TS. Para isso:
 Entra no terminal e acessa o diretorio que tem a aplicação
 Digita'npm install @types/jquery@2.0.42 --save-dev'  (tem que sempre procurar no Google qual a versão mais atual)
-esse processo cria na pasta 'node_modules' uma pasta '@types' que contem um arquivo 'index.d.ts' que mapeia os tipos para cada funcao do Jquery (as vezes o code não mostra. Tem que reabrir o projeto)
+Esse processo cria na pasta 'node_modules' uma pasta '@types' que contem um arquivo 'index.d.ts' que mapeia os tipos para cada funcao do Jquery (as vezes o code não mostra. Tem que reabrir o projeto)
