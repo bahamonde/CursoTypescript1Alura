@@ -7,21 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "tsc",
     "start": "tsc -w"
-    
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jquery": "^2.0.42",
     "typescript": "^2.3.2"
   },
-
-                
   " HACK de Commentarios explicativos": {
     "COMPILE": "É O NOME NO QUAL VC VAI CHAMAR O COMPILADOR TS 'TSC' NO TERMINAL. Mas pode colocar qualquer nome",
     "START": "'-W' É 'WATCH' PQ VAI OBSERVAR OS ARQUIVOS. Automatiza o processo de compilaçao deixando ele 'travado' funcionando direto e sem precisar compilar toda vez que houver uma alteração no TS "
   }
-  
 }
-
- 
- 
