@@ -24,3 +24,9 @@ Procura por 'dom.forms.datetime'
 E clica 2 vezes para mudar o valor para 'true' 
 *Para funcionar no Edge:*
 Não vai aceitar data no forms da data com '-' como em (12-05-2018). Por isso usamos o a funcao "this._inputData.value.replace(/-/g, '/'))" no TS para substituir os hifens por barras. Assim fica (12/05/2018)
+
+-  O Jquery é uma biblioteca de mais de 10 anos e não existia TS, assim o Jquery não reconhece o TS. 
+TSD (TypeScript Definition) é uma biblioteca que mapeia as funcoes do Jquery para ter a opçao de auto complete das funcoes Jquery no arquivo TS. Para isso:
+Entra no terminal e acessa o diretorio que tem a aplicação
+Digita'npm install @types/jquery@2.0.42 --save-dev'  (tem que sempre procurar no Google qual a versão mais atual)
+Esse processo cria na pasta 'node_modules' uma pasta '@types' que contem um arquivo 'index.d.ts' que mapeia os tipos para cada funcao do Jquery (as vezes o code não mostra. Tem que reabrir o projeto)
