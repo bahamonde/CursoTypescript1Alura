@@ -1,10 +1,22 @@
-class NegociaçoesView {
-    constructor(selector) {
-        this._elemento = document.querySelector(selector);
-    }
-    update(model) {
-        this._elemento.innerHTML = this.template(model);
-    }
+class NegociaçoesView extends View {
+    /* -----------------------------------------------------------------------------
+    
+        //PARTE DE CODIGO DESNECESSARIA COM A CRIACAO DA CLASSE VIEW pois os metodos foram centralizados lá para apenas ser herdado
+    
+        private _elemento:Element;
+    
+        constructor(seletor:string){
+            
+            this._elemento = document.querySelector(seletor);
+            
+        }
+    
+    
+        update(model:Negociacoes): void{    //pega o resultado do metodo template, atribui na propriedade 'innerHTML' e converte em elementos do DOM
+            this._elemento.innerHTML = this.template(model);
+        }
+    
+        */
     template(model) {
         return `
         <table class="table table-hover table-bordered">
@@ -21,12 +33,12 @@ class NegociaçoesView {
 
 
             ${model.paraArray().map(negociacao => `
-                <tr>
-                    <td>${negociacao.data.getDate()}/${negociacao.DATA.getMonth() + 1}/${negociacao.DATA.getFullYear()}</td>
-                    <td>${negociacao.quantidade}</td>
-                    <td>${negociacao.valor}</td>
-                    <td>${negociacao.volume}</td>
-                </tr>
+                    <tr>
+                        <td>${negociacao.data.getDate()}/${negociacao.data.getMonth() + 1}/${negociacao.data.getFullYear()}</td>
+                        <td>${negociacao.quantidade}</td>
+                        <td>${negociacao.valor}</td>
+                        <td>${negociacao.volume}</td>
+                    </tr>
                 `).join('')} 
 
             </tbody>

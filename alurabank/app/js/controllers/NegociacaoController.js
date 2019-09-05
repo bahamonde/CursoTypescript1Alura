@@ -1,7 +1,8 @@
 class NegociacaoController {
     constructor() {
         this._negociacoes = new Negociacoes();
-        this._negociacoesView = new NegociaçoesView('#negociaçoesView');
+        this._negociacoesView = new NegociaçoesView('#negociacoesView');
+        this._mensagemView = new MensagemView('#mensagemView');
         this._inputData = document.querySelector('#data');
         this._inputQuantidade = document.querySelector('#quantidade'); //id's do HTML
         this._inputValor = document.querySelector('#valor');
@@ -14,6 +15,7 @@ class NegociacaoController {
         parseFloat(this._inputValor.value));
         this._negociacoes.adiciona(negociacao);
         this._negociacoesView.update(this._negociacoes);
+        this._mensagemView.update('Negociação adicionada com sucesso!');
         /*
         this._negociacoes.paraArray().length=0; //'length=0' faz não ser possivel salvar informaçoes no array (é como se tivesse apagado o array)
 

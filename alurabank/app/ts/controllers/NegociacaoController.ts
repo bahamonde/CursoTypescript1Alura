@@ -4,7 +4,8 @@ private _inputData:HTMLInputElement; //tipo 'Element' pq o 'queryselector' puxa 
 private _inputQuantidade:HTMLInputElement;
 private _inputValor:HTMLInputElement;
 private _negociacoes = new Negociacoes();
-private _negociacoesView = new NegociaçoesView('#negociaçoesView');
+private _negociacoesView = new NegociaçoesView('#negociacoesView');
+private _mensagemView = new MensagemView('#mensagemView');
 
 constructor(){
     
@@ -26,6 +27,7 @@ adiciona(event: Event){
         this._negociacoes.adiciona(negociacao);
 
         this._negociacoesView.update(this._negociacoes);
+        this._mensagemView.update('Negociação adicionada com sucesso!');
 
         /*
         this._negociacoes.paraArray().length=0; //'length=0' faz não ser possivel salvar informaçoes no array (é como se tivesse apagado o array)
